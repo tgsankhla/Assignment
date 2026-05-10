@@ -165,14 +165,20 @@ Group09/
 5. **Add your API keys to `.env`**
 
    ```dotenv
-   OPENROUTER_API_KEY=your-openrouter-api-key-here
-   LLM_MODEL=openai/gpt-4o
-   SLACK_BOT_TOKEN=xoxb-your-slack-bot-token-here
-   SLACK_CHANNEL=#incident-alerts
+   OPENROUTER_API_KEY=openrouter-keys
+   LLM_MODEL=llm-model
+   SLACK_BOT_TOKEN=slack-bot-token (Ex - xoxb-......)
+   SLACK_CHANNEL=slack-channel
+   JIRA_INSTANCE_URL= jira-url (Ex. https://.......atlassian.net)
+   JIRA_USER_EMAIL=jira-email
+   JIRA_API_TOKEN=put-token-to-log-incident
+   JIRA_PROJECT_KEY=workspace-or-project-token
    ```
 
    - Get an OpenRouter key at [openrouter.ai](https://openrouter.ai)
    - Create a Slack bot with `chat:write` scope and invite it to `SLACK_CHANNEL`
+   - Log in to Jira and create a `Kanban` or `Scrum` Project. Look for Project Key to be used as `JIRA_PROJECT_KEY`.
+   - Visit Atlassian security page and get API Token
 
 6. **Run the dashboard**
 

@@ -1,0 +1,134 @@
+2026-05-10 07:44:19,036 INFO orchestrator.graph Graph node: classifier started
+2026-05-10 07:44:19,036 INFO agents.classifier Classifying 6 lines of logs
+2026-05-10 07:44:22,589 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:44:25,506 INFO agents.classifier Classified 6 entries in 6.5s
+2026-05-10 07:44:25,507 INFO orchestrator.graph Graph node: classifier completed
+2026-05-10 07:44:25,508 INFO orchestrator.graph Graph node: remediation started
+2026-05-10 07:44:25,509 INFO agents.remediation Generating remediations for 6 classified entries
+2026-05-10 07:44:26,156 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:44:39,810 INFO agents.remediation Generated 5 remediations in 14.3s
+2026-05-10 07:44:39,811 INFO orchestrator.graph Graph node: remediation completed
+2026-05-10 07:44:39,813 INFO orchestrator.graph Graph node: cookbook started
+2026-05-10 07:44:39,814 INFO agents.cookbook Synthesizing cookbook from 5 remediations
+2026-05-10 07:44:39,814 INFO orchestrator.graph Graph node: jira_ticket started
+2026-05-10 07:44:39,815 INFO orchestrator.graph Graph node: slack_notifier started
+2026-05-10 07:44:39,815 INFO agents.jira_ticket Found 2 CRITICAL and 3 HIGH severity entries
+2026-05-10 07:44:39,815 INFO agents.slack_notifier Sending Slack notifications for 5 remediations
+2026-05-10 07:44:39,815 INFO agents.jira_ticket Generating JIRA tickets for 4 critical/high remediations
+2026-05-10 07:44:40,500 INFO agents.slack_notifier Slack notification sent to #all-tushar-ws
+2026-05-10 07:44:40,501 INFO agents.slack_notifier Slack notifier completed in 0.7s — 1 sent
+2026-05-10 07:44:40,501 INFO orchestrator.graph Graph node: slack_notifier completed
+2026-05-10 07:44:40,531 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:44:40,548 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:44:44,696 INFO agents.jira_ticket LLM generated 4 ticket specifications
+2026-05-10 07:44:44,697 INFO agents.jira_ticket JIRA config validated. URL: https://tusharsankhla.atlassian.net, Project: TS
+2026-05-10 07:44:45,577 INFO agents.jira_ticket JIRA client connected - attempting to create 4 tickets
+2026-05-10 07:44:45,577 INFO agents.jira_ticket Creating ticket 1/4: CRITICAL: Pod api-server-7f8d9b6c4-xj2k9 is crashing due to OOMKilled condition.
+2026-05-10 07:44:47,154 INFO agents.jira_ticket Creating ticket 2/4: HIGH: Pod worker-batch-9c7f3a2-m4k8 failed to schedule due to insufficient memory.
+2026-05-10 07:44:48,253 INFO agents.jira_ticket Creating ticket 3/4: HIGH: Liveness probe failed for pod redis-cache-0 due to connection refusal.
+2026-05-10 07:44:49,034 INFO agents.cookbook Cookbook synthesized in 9.2s
+2026-05-10 07:44:49,035 INFO orchestrator.graph Graph node: cookbook completed
+2026-05-10 07:44:49,474 INFO agents.jira_ticket Creating ticket 4/4: HIGH: Ingress controller timeout connecting to backend api-gateway:8080.
+2026-05-10 07:44:50,811 INFO agents.jira_ticket JIRA ticket creation complete: 4 created, 0 failed, 0 mocked
+2026-05-10 07:44:50,812 INFO orchestrator.graph Graph node: jira_ticket completed
+2026-05-10 07:46:07,674 INFO orchestrator.graph Graph node: classifier started
+2026-05-10 07:46:07,675 INFO agents.classifier Classifying 6 lines of logs
+2026-05-10 07:46:08,738 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:46:16,816 INFO agents.classifier Classified 6 entries in 9.1s
+2026-05-10 07:46:16,817 INFO orchestrator.graph Graph node: classifier completed
+2026-05-10 07:46:16,818 INFO orchestrator.graph Graph node: remediation started
+2026-05-10 07:46:16,818 INFO agents.remediation Generating remediations for 6 classified entries
+2026-05-10 07:46:18,654 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:46:22,782 INFO agents.remediation Generated 5 remediations in 6.0s
+2026-05-10 07:46:22,783 INFO orchestrator.graph Graph node: remediation completed
+2026-05-10 07:46:22,785 INFO orchestrator.graph Graph node: cookbook started
+2026-05-10 07:46:22,785 INFO agents.cookbook Synthesizing cookbook from 5 remediations
+2026-05-10 07:46:22,785 INFO orchestrator.graph Graph node: jira_ticket started
+2026-05-10 07:46:22,786 INFO orchestrator.graph Graph node: slack_notifier started
+2026-05-10 07:46:22,786 INFO agents.slack_notifier Sending Slack notifications for 5 remediations
+2026-05-10 07:46:22,786 INFO agents.jira_ticket Found 2 CRITICAL and 3 HIGH severity entries
+2026-05-10 07:46:22,790 INFO agents.jira_ticket Generating JIRA tickets for 4 critical/high remediations
+2026-05-10 07:46:23,374 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:46:23,440 INFO agents.slack_notifier Slack notification sent to #all-tushar-ws
+2026-05-10 07:46:23,441 INFO agents.slack_notifier Slack notifier completed in 0.7s — 1 sent
+2026-05-10 07:46:23,441 INFO orchestrator.graph Graph node: slack_notifier completed
+2026-05-10 07:46:23,477 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:46:27,408 INFO agents.cookbook Cookbook synthesized in 4.6s
+2026-05-10 07:46:27,414 INFO orchestrator.graph Graph node: cookbook completed
+2026-05-10 07:46:27,470 INFO agents.jira_ticket LLM generated 4 ticket specifications
+2026-05-10 07:46:27,574 INFO agents.jira_ticket JIRA config validated. URL: https://tusharsankhla.atlassian.net, Project: TS
+2026-05-10 07:46:29,126 INFO agents.jira_ticket JIRA client connected - attempting to create 4 tickets
+2026-05-10 07:46:29,126 INFO agents.jira_ticket Creating ticket 1/4: CRITICAL: Pod api-server-7f8d9b6c4-xj2k9 is experiencing OOM and crash loop back-off.
+2026-05-10 07:46:30,339 INFO agents.jira_ticket Creating ticket 2/4: HIGH: Pod worker-batch-9c7f3a2-m4k8 cannot be scheduled due to insufficient memory.
+2026-05-10 07:46:32,118 INFO agents.jira_ticket Creating ticket 3/4: HIGH: Liveness probe failed for pod redis-cache-0 due to connection refused.
+2026-05-10 07:46:33,289 INFO agents.jira_ticket Creating ticket 4/4: HIGH: Upstream connection timeout for backend api-gateway:8080.
+2026-05-10 07:46:34,663 INFO agents.jira_ticket JIRA ticket creation complete: 4 created, 0 failed, 0 mocked
+2026-05-10 07:46:34,665 INFO orchestrator.graph Graph node: jira_ticket completed
+2026-05-10 07:46:52,219 INFO orchestrator.graph Graph node: classifier started
+2026-05-10 07:46:52,220 INFO agents.classifier Classifying 6 lines of logs
+2026-05-10 07:46:53,047 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:46:57,447 INFO agents.classifier Classified 6 entries in 5.2s
+2026-05-10 07:46:57,447 INFO orchestrator.graph Graph node: classifier completed
+2026-05-10 07:47:54,200 INFO orchestrator.graph Graph node: classifier started
+2026-05-10 07:47:54,201 INFO agents.classifier Classifying 1 lines of logs
+2026-05-10 07:47:55,403 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:47:56,250 INFO agents.classifier Classified 1 entries in 2.0s
+2026-05-10 07:47:56,251 INFO orchestrator.graph Graph node: classifier completed
+2026-05-10 07:47:56,252 INFO orchestrator.graph Graph node: remediation started
+2026-05-10 07:47:56,252 INFO agents.remediation Generating remediations for 1 classified entries
+2026-05-10 07:47:57,005 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:47:58,434 INFO agents.remediation Generated 1 remediations in 2.2s
+2026-05-10 07:47:58,434 INFO orchestrator.graph Graph node: remediation completed
+2026-05-10 07:47:58,436 INFO orchestrator.graph Graph node: cookbook started
+2026-05-10 07:47:58,436 INFO agents.cookbook Synthesizing cookbook from 1 remediations
+2026-05-10 07:47:58,436 INFO orchestrator.graph Graph node: jira_ticket started
+2026-05-10 07:47:58,437 INFO orchestrator.graph Graph node: slack_notifier started
+2026-05-10 07:47:58,437 INFO agents.jira_ticket Found 0 CRITICAL and 1 HIGH severity entries
+2026-05-10 07:47:58,437 INFO agents.slack_notifier Sending Slack notifications for 1 remediations
+2026-05-10 07:47:58,440 INFO agents.jira_ticket Generating JIRA tickets for 1 critical/high remediations
+2026-05-10 07:47:58,986 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:47:59,085 INFO agents.slack_notifier Slack notification sent to #all-tushar-ws
+2026-05-10 07:47:59,085 INFO agents.slack_notifier Slack notifier completed in 0.6s — 1 sent
+2026-05-10 07:47:59,086 INFO orchestrator.graph Graph node: slack_notifier completed
+2026-05-10 07:47:59,945 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 07:48:01,182 INFO agents.cookbook Cookbook synthesized in 2.7s
+2026-05-10 07:48:01,182 INFO orchestrator.graph Graph node: cookbook completed
+2026-05-10 07:48:01,183 INFO agents.jira_ticket LLM generated 1 ticket specifications
+2026-05-10 07:48:01,184 INFO agents.jira_ticket JIRA config validated. URL: https://tusharsankhla.atlassian.net, Project: TS
+2026-05-10 07:48:02,466 INFO agents.jira_ticket JIRA client connected - attempting to create 1 tickets
+2026-05-10 07:48:02,466 INFO agents.jira_ticket Creating ticket 1/1: CRITICAL: Payment service timeout when connecting to payment gateway
+2026-05-10 07:48:03,831 INFO agents.jira_ticket JIRA ticket creation complete: 1 created, 0 failed, 0 mocked
+2026-05-10 07:48:03,834 INFO orchestrator.graph Graph node: jira_ticket completed
+2026-05-10 08:18:18,604 INFO orchestrator.graph Graph node: classifier started
+2026-05-10 08:18:18,609 INFO agents.classifier Classifying 6 lines of logs
+2026-05-10 08:18:20,793 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 08:18:23,531 INFO agents.classifier Classified 6 entries in 4.9s
+2026-05-10 08:18:23,531 INFO orchestrator.graph Graph node: classifier completed
+2026-05-10 08:18:23,532 INFO orchestrator.graph Graph node: remediation started
+2026-05-10 08:18:23,533 INFO agents.remediation Generating remediations for 6 classified entries
+2026-05-10 08:18:24,083 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 08:18:36,248 INFO agents.remediation Generated 5 remediations in 12.7s
+2026-05-10 08:18:36,248 INFO orchestrator.graph Graph node: remediation completed
+2026-05-10 08:18:36,250 INFO orchestrator.graph Graph node: cookbook started
+2026-05-10 08:18:36,250 INFO agents.cookbook Synthesizing cookbook from 5 remediations
+2026-05-10 08:18:36,251 INFO orchestrator.graph Graph node: jira_ticket started
+2026-05-10 08:18:36,252 INFO orchestrator.graph Graph node: slack_notifier started
+2026-05-10 08:18:36,252 INFO agents.jira_ticket Found 2 CRITICAL and 3 HIGH severity entries
+2026-05-10 08:18:36,255 INFO agents.slack_notifier Sending Slack notifications for 5 remediations
+2026-05-10 08:18:36,255 INFO agents.jira_ticket Generating JIRA tickets for 4 critical/high remediations
+2026-05-10 08:18:36,759 INFO agents.slack_notifier Slack notification sent to #all-tushar-ws
+2026-05-10 08:18:36,761 INFO agents.slack_notifier Slack notifier completed in 0.5s — 1 sent
+2026-05-10 08:18:36,762 INFO orchestrator.graph Graph node: slack_notifier completed
+2026-05-10 08:18:36,939 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 08:18:37,018 INFO httpx HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 08:18:40,595 INFO agents.cookbook Cookbook synthesized in 4.3s
+2026-05-10 08:18:40,596 INFO orchestrator.graph Graph node: cookbook completed
+2026-05-10 08:18:41,070 INFO agents.jira_ticket LLM generated 4 ticket specifications
+2026-05-10 08:18:41,070 INFO agents.jira_ticket JIRA config validated. URL: https://tusharsankhla.atlassian.net, Project: TS
+2026-05-10 08:18:41,885 INFO agents.jira_ticket JIRA client connected - attempting to create 4 tickets
+2026-05-10 08:18:41,885 INFO agents.jira_ticket Creating ticket 1/4: CRITICAL: Pod api-server-7f8d9b6c4-xj2k9 is crashing due to OOMKilled condition.
+2026-05-10 08:18:43,345 INFO agents.jira_ticket Creating ticket 2/4: HIGH: Pod worker-batch-9c7f3a2-m4k8 failed to schedule due to insufficient memory.
+2026-05-10 08:18:44,718 INFO agents.jira_ticket Creating ticket 3/4: HIGH: Liveness probe failed for pod redis-cache-0 due to connection refusal.
+2026-05-10 08:18:46,029 INFO agents.jira_ticket Creating ticket 4/4: HIGH: Ingress controller timeout connecting to backend api-gateway:8080.
+2026-05-10 08:18:47,151 INFO agents.jira_ticket JIRA ticket creation complete: 4 created, 0 failed, 0 mocked
+2026-05-10 08:18:47,152 INFO orchestrator.graph Graph node: jira_ticket completed

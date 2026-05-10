@@ -2,7 +2,7 @@
 
 > Automatically classify ops logs by severity, generate actionable remediations, and push notifications to Slack and JIRA — all orchestrated by a LangGraph multi-agent pipeline with a live Streamlit dashboard.
 
-### [Try the Live Demo](https://devopsanalyzerassignment.streamlit.app/) | [Watch the Demo Video](......)
+### [Try the Live Demo](.......) | [Watch the Demo Video](......)
 
 ---
 
@@ -258,13 +258,38 @@ Tests cover all five agents, the orchestrator graph, the router, state initialis
 
 | File | Format | Contents |
 |---|---|---|
-| `sample_logs/mixed_incident.log` | Syslog plain text | Mixed CRITICAL/HIGH/MEDIUM incidents — OOM kills, service crashes, disk warnings |
-| `sample_logs/k8s_crash.json` | JSON array | Kubernetes kubelet events — OOMKilled pods, CrashLoopBackOff, back-off restarts |
-| `sample_logs/app_errors.csv` | CSV | Application-layer errors — payment gateway timeouts, connection failures |
-| `sample_logs/system_logs_mixed_1000.log` | Mixed (access + syslog) | 1 000-line dataset combining HTTP access logs and system events for load testing |
+| `sample_logs/logfile_15_incidents.log` | 15 incidents - Simple log file | CRITICAL/ERROR/WARN - issues related to permissions, timeout |
+| `sample_logs/logfile_100_incidents.txt` | 100 incidents - Simple text file | CRITICAL/ERROR/WARN - issues related to pod crash, memory, connectivity |
+| `sample_logs/pod_crash_6_incidents.json` | 06 incidents - JSON Format | ERROR/WARNING - issues related to kubernetes failures for pods, CrashLoopBackOff, back-off |
+| `sample_logs/csv_incident_logs_8_incidents.csv` | 8 incidents - CSV File| ERROR/WARN - Application-layer errors — payment gateway timeouts, connection failures |
+| `sample_logs/logfile_1000_lines.log` | 1000 lines - Simple log file | 1000-line dataset combining HTTP access logs and system events for load testing |
 
 ---
 
 ## Team
 
-**Group 9 — AI Engineers Accelerated Program - C6**
+*Group 9 — AI Engineers Accelerated Program - C6*
+--
+Below team members worked together to complete the assignment for submission
+ - Tushar
+ - Kanishk
+ - Wikram
+ - Vivek
+ - Sachin
+ - Ajay
+ - Mayur
+ - Shareena
+
+---
+
+## Inspired by Outskill Engineering Accelerator Team
+
+- Sham
+- Vidit
+- Kartik
+- Divij
+- Ishan
+- Dileep
+- Siddharth
+
+---
